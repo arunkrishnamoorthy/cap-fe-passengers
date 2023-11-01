@@ -17,9 +17,14 @@
   },
   "scripts": {
     "start": "cds-serve",
-    "watch-maintainpassengers": "cds watch --open maintainpassengers/webapp/index.html?sap-ui-xx-viewCache=false"
+    "watch-maintainpassengers": "cds watch --open maintainpassengers/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-maintainpassengersfpm": "cds watch --open com.fe.fpm.maintainpassengersfpm/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "sapux": [
-    "app/maintainpassengers"
+    "app/maintainpassengers",
+    "app/maintainpassengersfpm"
+  ],
+  "workspaces": [
+    "app/*"
   ]
 }

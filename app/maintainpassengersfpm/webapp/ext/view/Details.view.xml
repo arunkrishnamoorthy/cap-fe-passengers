@@ -1,0 +1,27 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:macros="sap.fe.macros"
+    xmlns:html="http://www.w3.org/1999/xhtml" controllerName="com.fe.fpm.maintainpassengersfpm.ext.view.Details"
+    >
+    <Page id="Details" title="Details">
+        <content>
+            <macros:Form id="idGeneral" metaPath="@UI.FieldGroup#GeneralNew"></macros:Form>
+            <!-- <macros:Table metaPath="to_Address/@com.sap.vocabularies.UI.v1.LineItem#Address"
+                    readOnly="true"
+                    id="table" /> -->
+
+            <Button id="editButton"
+                text="Edit"
+                press="onEditPress"
+                type="Emphasized"
+                class="sapUiSmallMarginBegin"
+                visible="{= !${ui>/isEditable} }"/>
+ 
+            <Button id="cancelButton"
+                text="Cancel"
+                press="onCancelPress"
+                type="Reject"
+                class="sapUiSmallMarginBegin"
+                visible="{ui>/isEditable}" />
+            
+        </content>
+    </Page>
+</mvc:View>

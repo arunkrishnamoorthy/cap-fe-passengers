@@ -81,6 +81,17 @@ entity Passenger: managed {
         CountryCode: Country;
         PhoneNumber: String(30);
         EMailAddress: String(256);
+        to_Address: Association to PassengerAddress 
+                    on to_Address.Parent = $self;
+}
+
+entity PassengerAddress: managed {
+    key AddressId: String(6) @Core.Computed;
+        Street: String(40);
+        City: String(40);
+        Country: String(40);
+        PostalCode: String(10);
+        Parent: Association to Passenger;
 }
 
 entity TravelAgency: MasterData {
